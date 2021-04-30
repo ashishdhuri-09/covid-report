@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<style>
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+
+<h1 style="text-align: center;">covid-19 countarywise</h1>
+{{#each info as |val key| }}
+<div class="center">
+    <h2 style="text-align:center;">{{val.country}}</h2>
+    <h3 style="text-align:center;">total case: {{val.cases}}</h3>
+    <h3 style="text-align:center;" class="text-danger">total active case: {{val.active}}</h3>
+    <h3 style="text-align:center;" class="text-success">total recovred: {{val.recovered}}</h3>
+    <h3 style="text-align:center;" class="text-danger">total deaths: {{val.deaths}}</h3>
+    <h3 style="text-align:center;">total tody's cases: {{val.todayCases}}</h3>
+    <h3 style="text-align:center;">total today's deaths: {{val.todayDeaths}}</h3>
+    <img class="center" src="{{val.countryInfo.flag}}" /><br><br>
+</div>
+{{/each}}
